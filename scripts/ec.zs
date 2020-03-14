@@ -1,0 +1,2 @@
+recipes.remove(<energyconverters:energy_bridge>);
+recipes.addShaped(<energyconverters:energy_bridge>, [[<ore:plateIron>, <ore:barsIron>, <ore:plateIron>], [<ore:barsIron>, <buildcrafttransport:plug_power_adaptor>, <ore:barsIron>], [<ore:plateIron>, <ore:barsIron>, <ore:plateIron>]]);

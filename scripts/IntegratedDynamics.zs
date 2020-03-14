@@ -1,0 +1,20 @@
+recipes.remove(<integrateddynamics:mechanical_drying_basin>);
+recipes.remove(<integrateddynamics:mechanical_squeezer>);
+recipes.remove(<integrateddynamics:cable>);
+recipes.remove(<integratedtunnels:part_interface_energy_item>);
+recipes.remove(<integratedtunnels:part_interface_fluid_item>);
+recipes.remove(<integratedtunnels:part_interface_item_item>);
+recipes.remove(<integratedcrafting:part_crafting_writer_item>);
+recipes.remove(<integratedcrafting:part_interface_crafting_item>);
+
+mods.calculator.atomic.addRecipe(<integrateddynamics:energy_battery>.withTag({capacity: 2000000, energy: 0}), <integrateddynamics:squeezer>, <integrateddynamics:energy_battery>.withTag({capacity: 2000000, energy: 0}), <integrateddynamics:mechanical_squeezer>);
+mods.calculator.atomic.addRecipe(<integrateddynamics:energy_battery>.withTag({capacity: 2000000, energy: 0}), <integrateddynamics:drying_basin>, <integrateddynamics:energy_battery>.withTag({capacity: 2000000, energy: 0}), <integrateddynamics:mechanical_drying_basin>);
+recipes.addShaped(<integrateddynamics:cable> * 8, [[<enderio:item_material:4>, <integrateddynamics:crystalized_menril_block>, <enderio:item_material:4>],[<minecraft:stick>, <enderio:item_material:4>, <minecraft:stick>], [<enderio:item_material:4>, <integrateddynamics:crystalized_menril_block>, <enderio:item_material:4>]]);
+recipes.addShaped(<integratedtunnels:part_interface_energy_item> * 4, [[<integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:crystalized_menril_chunk>],[<integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:part_machine_reader_item>, <integrateddynamics:crystalized_menril_chunk>], [<integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:crystalized_menril_block>, <integrateddynamics:crystalized_menril_chunk>]]);
+recipes.addShaped(<integratedtunnels:part_interface_fluid_item> * 4, [[<integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:crystalized_menril_chunk>],[<integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:part_fluid_reader_item>, <integrateddynamics:crystalized_menril_chunk>], [<integrateddynamics:crystalized_menril_chunk>, <minecraft:cauldron>, <integrateddynamics:crystalized_menril_chunk>]]);
+recipes.addShaped(<integratedtunnels:part_interface_item_item> * 4, [[<integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:crystalized_menril_chunk>],[<integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:part_inventory_reader_item>, <integrateddynamics:crystalized_menril_chunk>], [<integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:crystalized_menril_chunk>, <integrateddynamics:crystalized_menril_chunk>]]);
+recipes.addShaped(<integratedcrafting:part_crafting_writer_item>, [[<minecraft:crafting_table>, <integrateddynamics:crystalized_menril_block>, <minecraft:crafting_table>],[<integrateddynamics:part_machine_writer_item>, <rftools:crafter3>, <integrateddynamics:part_machine_reader_item>], [<minecraft:crafting_table>, <integrateddynamics:part_connector_omni_directional_item>, <minecraft:crafting_table>]]);
+recipes.addShaped(<integratedcrafting:part_interface_crafting_item>, [[<minecraft:crafting_table>, <integrateddynamics:crystalized_menril_block>, <minecraft:crafting_table>],[<integrateddynamics:part_machine_writer_item>, <rftools:crafter3>, <integrateddynamics:part_machine_reader_item>], [<minecraft:crafting_table>, <integrateddynamics:crystalized_menril_block>, <minecraft:crafting_table>]]);
+
+recipes.remove(<integratedterminals:part_terminal_crafting_job_item>);
+recipes.addShaped(<integratedterminals:part_terminal_crafting_job_item>, [[<integratedterminals:menril_glass>, <buildcraftsilicon:integration_table>, <integratedterminals:menril_glass>],[<integrateddynamics:variable_transformer>, <integratedterminals:part_terminal_storage_item>, <integrateddynamics:variable_transformer:1>], [<integratedterminals:menril_glass>, <cyclicmagic:auto_crafter>, <integratedterminals:menril_glass>]]);
